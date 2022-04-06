@@ -3,4 +3,4 @@
 //import './component-intermediate/manipulate-list';
 //import'./component-intermediate/todo-app-damo';
 // import'./use-effect-demo/use-effect-intro';
-import'./component-intermediate/timer-demo';
+import'./use-effect-demo/use-effect-fetch-api';
