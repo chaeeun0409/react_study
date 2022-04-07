@@ -19,6 +19,7 @@ const NewsApp = (props) => {
         fetch(`http://newsapi.org/v2/top-headlines?country=kr&apiKey=${apiKey}`)
             .then(res => res.json())
             .then(data => {
+                
                 // 데이터 설정 및 로딩 상태 갱신
                 setArticles(data.articles)
                 setLoading(false)
@@ -27,7 +28,7 @@ const NewsApp = (props) => {
     return (
         <div>
             {
-                articles.length === 0
+                articles.length === 0  //
                     ? loading ? <h1>뉴스를 불러오는 중입니다.</h1> : <h1>표시할 뉴스가
                         없습니다.</h1>
                     :
