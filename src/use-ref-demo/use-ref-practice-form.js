@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 import ReactDOM from "react-dom"
 
 /*
+
     요구 사항
     1. 모든 input 요소에 ref 연결해주기
     2. 버튼 누르면 해당되는 input 요소에 focus() 메소드 호출해서 입력 가능 상태로 만들어주기
@@ -18,10 +19,14 @@ function Form() {
         e.preventDefault()
 
         // 3. Submit 버튼을 누르면 콘솔에 모든 input 요소의 값을 출력하도록 하기
+        console.log(nameInputRef.current.value, emailInputRef.current.value,PasswordInputRef.current.value);
     }
 
     const handleReset = () => {
         // 4. Reset 버튼을 누르면 모든 input 요소의 값을 ''로 초기화하기
+        nameInputRef.current.value=""
+        emailInputRef.current.value=""
+        PasswordInputRef.current.value=""
     }
 
     // 1. 모든 input 요소에 ref 연결해주기
@@ -29,15 +34,15 @@ function Form() {
         <>
             <label>
                 Name:
-                <input type="text" placeholder="name" />
+                <input type="text" placeholder="name" ref={nameInputRef} />
             </label>
             <label>
                 Email:
-                <input type="text" placeholder="email" />
+                <input type="text" placeholder="email" ref={EmailInputRef} />
             </label>
             <label>
                 Password:
-                <input type="password" placeholder="password" />
+                <input type="password" placeholder="password" ref={PasswordInputRef}/>
             </label>
 
             <hr />
